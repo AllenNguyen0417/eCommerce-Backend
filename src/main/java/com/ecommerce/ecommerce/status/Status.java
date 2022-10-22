@@ -9,5 +9,7 @@ public enum Status {
     PRODUCT_NOT_FOUND,
     CART_ITEM_NOT_FOUND,
     USER_ID_NOT_EXISTS,
-    UPC_NOT_EXISTS
+    UPC_NOT_EXISTS,
+
+    ADDRESS_NOT_FOUND
 }

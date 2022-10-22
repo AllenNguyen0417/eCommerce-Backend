@@ -19,7 +19,7 @@ public class CartItemController {
     @Autowired
     CartItemService cartItemService;
 
-    @GetMapping("/getcarts")
+    @GetMapping("/carts")
     ResponseEntity<List<CartItem>> getCart() {
         List<CartItem> cartItems = cartItemService.getCart();
         if (cartItems.size() > 0) {
@@ -30,7 +30,7 @@ public class CartItemController {
         }
     }
 
-    @GetMapping("/getcart/{cartItemId}")
+    @GetMapping("/cart/{cartItemId}")
     ResponseEntity<CartItem> getCartById(@PathVariable Integer cartItemId) {
         CartItem cartItem = cartItemService.getCartById(cartItemId);
         if (cartItem == null) {
@@ -53,10 +53,10 @@ public class CartItemController {
     }
 
     @PutMapping("/updatecart")
-    ResponseEntity<String> upateCart(@RequestBody CartItem cartItem) {
+    ResponseEntity<String> updateCart(@RequestBody CartItem cartItem) {
         Status stt = cartItemService.updateCartItem(cartItem);
         if (stt == Status.SUCCESS) {
-            return ResponseEntity.status(HttpStatus.CREATED).body("Cart Update Successfully!");
+            return ResponseEntity.status(HttpStatus.OK).body("Cart Update Successfully!");
         }
         else if (stt == Status.CART_ITEM_NOT_FOUND) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Cart Item ID Not Found!");
