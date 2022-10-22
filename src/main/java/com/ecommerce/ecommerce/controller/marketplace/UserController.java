@@ -1,9 +1,9 @@
-package com.ecommerce.ecommerce.controller.users;
+package com.ecommerce.ecommerce.controller.marketplace;
 
 
 import com.ecommerce.ecommerce.status.Status;
-import com.ecommerce.ecommerce.model.users.User;
-import com.ecommerce.ecommerce.service.users.UserService;
+import com.ecommerce.ecommerce.model.marketplace.User;
+import com.ecommerce.ecommerce.service.marketplace.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/api/user")
+@RequestMapping("/api/marketplace/user")
 public class UserController {
     @Autowired
     UserService userService;

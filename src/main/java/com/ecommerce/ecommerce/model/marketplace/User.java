@@ -1,4 +1,4 @@
-package com.ecommerce.ecommerce.model.users;
+package com.ecommerce.ecommerce.model.marketplace;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -30,12 +30,6 @@ public class User {
     public User() {
     }
 
-//    public boolean isLoggedIn() {
-//        return loggedIn;
-//    }
-//    public void setLoggedIn(boolean loggedIn) {
-//        this.loggedIn = loggedIn;
-//    }
 
     @Override
     public boolean equals(Object o) {

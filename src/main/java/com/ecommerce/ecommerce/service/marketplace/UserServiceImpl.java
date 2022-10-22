@@ -1,8 +1,8 @@
-package com.ecommerce.ecommerce.service.users;
+package com.ecommerce.ecommerce.service.marketplace;
 
 import com.ecommerce.ecommerce.status.Status;
-import com.ecommerce.ecommerce.model.users.User;
-import com.ecommerce.ecommerce.repository.users.UserRepository;
+import com.ecommerce.ecommerce.model.marketplace.User;
+import com.ecommerce.ecommerce.repository.marketplace.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

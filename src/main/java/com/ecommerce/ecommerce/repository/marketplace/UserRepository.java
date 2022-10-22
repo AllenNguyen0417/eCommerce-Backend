@@ -1,13 +1,9 @@
-package com.ecommerce.ecommerce.repository.users;
+package com.ecommerce.ecommerce.repository.marketplace;
 
-import com.ecommerce.ecommerce.model.users.User;
+import com.ecommerce.ecommerce.model.marketplace.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-import java.util.Optional;
-
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
-
 }
