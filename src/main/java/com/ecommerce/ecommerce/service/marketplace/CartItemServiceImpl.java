@@ -67,19 +67,18 @@ public class CartItemServiceImpl implements CartItemService{
             return Status.CART_ITEM_NOT_FOUND;
         }
 
-        if (!userIds.contains(cartItem.getUserId())) {
-            return Status.USER_ID_NOT_EXISTS;
-        }
-
-        if(!upcs.contains(cartItem.getUpc())) {
-            return Status.UPC_NOT_EXISTS;
-        }
-
         if (cartItem.getUserId() != null) {
+            if (!userIds.contains(cartItem.getUserId())) {
+                return Status.USER_ID_NOT_EXISTS;
+            }
             cItem.setUserId(cartItem.getUserId());
             cartItemRepository.save(cItem);
         }
+
         if (cartItem.getUpc() != null) {
+            if(!upcs.contains(cartItem.getUpc())) {
+                return Status.UPC_NOT_EXISTS;
+            }
             cItem.setUpc(cartItem.getUpc());
             cartItemRepository.save(cItem);
         }

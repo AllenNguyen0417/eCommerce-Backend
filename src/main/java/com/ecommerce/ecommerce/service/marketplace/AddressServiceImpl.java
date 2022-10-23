@@ -59,10 +59,11 @@ public class AddressServiceImpl implements AddressService{
         if (addr == null) {
             return Status.ADDRESS_NOT_FOUND;
         }
-        if (!userIds.contains(address.getUserId())) {
-            return Status.USER_ID_NOT_EXISTS;
-        }
+
         if(address.getUserId() != null) {
+            if (!userIds.contains(address.getUserId())) {
+                return Status.USER_ID_NOT_EXISTS;
+            }
             addr.setUserId(address.getUserId());
             addressRepository.save(addr);
         }
